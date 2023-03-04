@@ -19,4 +19,7 @@
     <string name="this_is_moveactivity2">Ini MoveActivity 2</string>
     <string name="explicit_intent">Explicit Intent</string>
     <string name="intent_mengirim_data">Intent - Mengirim Data</string>
+    <string name="implicit_intent">Implicit Intent</string>
+    <string name="view_website">View Website</string>
+    <string name="mendapatkan_nilai_balik_dari_intent">Mendapatkan Nilai Balik dari Intent</string>
 </resources>

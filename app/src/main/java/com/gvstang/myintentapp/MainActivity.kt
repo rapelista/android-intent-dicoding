@@ -1,12 +1,14 @@
 package com.gvstang.myintentapp
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,10 +17,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnMoveActivity2: Button = findViewById(R.id.btn_move_activity2)
         val btnMoveActivityData: Button = findViewById(R.id.btn_move_activity_data)
         val btnMoveActivityObject: Button = findViewById(R.id.btn_move_activity_object)
+        val btnDialNumber: Button = findViewById(R.id.dial_number)
+        val btnViewWebsite: Button = findViewById(R.id.view_website)
+
         btnMoveActivity.setOnClickListener(this)
         btnMoveActivity2.setOnClickListener(this)
         btnMoveActivityData.setOnClickListener(this)
         btnMoveActivityObject.setOnClickListener(this)
+        btnDialNumber.setOnClickListener(this)
+        btnViewWebsite.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -48,6 +55,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveObjectIntent = Intent(this@MainActivity, MoveWithObjectActivity::class.java)
                 moveObjectIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person)
                 startActivity(moveObjectIntent)
+            }
+            R.id.dial_number -> {
+                val phoneNumber = "082121762181"
+                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(dialPhoneIntent)
+            }
+            R.id.view_website -> {
+                val website = "https://fakmalh.vercel.app"
+                val viewWebsiteIntent = Intent(Intent.ACTION_VIEW, Uri.parse(website))
+                startActivity(viewWebsiteIntent)
             }
         }
     }

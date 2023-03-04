@@ -47,4 +47,24 @@
         android:layout_height="wrap_content"
         android:text="@string/move_with_object" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/implicit_intent"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginVertical="8dp" />
+
+    <Button
+        android:id="@+id/dial_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dial_number" />
+
+    <Button
+        android:id="@+id/view_website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_website" />
+
 </LinearLayout>
